@@ -1,5 +1,10 @@
 // https://cses.fi/problemset/task/1633
-// Solucion: Usar DP.
+// Solucion: DP. La funcion es la siguiente:
+// f(x) es el numero de formas distintas de sumar x usando el dado.
+// f(0) = 1, ya que para sumar 0 se puede de 1 sola forma, que es no tirar el dado.
+// f(x) = f(x - 1) + f(x - 2) + ... + f(x - 6)
+// Para x < 0, f(x) = 0 ya que es un numero invalido.
+// El arbol recursivo se traslapa, por lo que se pueden memorizar los valores de f(x).
 #include <bits/stdc++.h>
 
 using namespace std;
